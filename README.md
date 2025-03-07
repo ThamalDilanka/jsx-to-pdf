@@ -11,6 +11,24 @@ A lightweight proof-of-concept (PoC) for a PDF generation service using Express.
 - Dynamic JSX template rendering from request payload
 - RESTful API endpoints for PDF generation
 
+## Implementation Guide
+
+For a detailed explanation of how this solution works and how to implement a similar system, check out the [Implementation Guide](./IMPLEMENTATION_GUIDE.md). The guide covers:
+
+- Architecture overview
+- Core technologies
+- Step-by-step implementation instructions
+- Key components explanation
+- PDF generation process
+- Dynamic JSX compilation
+- Styling system
+- API design
+- Testing approach
+- Deployment considerations
+- Performance optimization
+- Security considerations
+- System extension guidelines
+
 ## Technology Stack
 
 - **Backend**: Node.js with Express.js for the API server
@@ -313,7 +331,7 @@ This endpoint allows you to send a JSX template as a string in the request paylo
     "completionDate": "March 7, 2024",
     "certificateId": "CERT-2024-03-001",
     "issuerName": "JavaScript Academy",
-    "issuerSignature": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAF7UlEQVR4nO2ce4hVVRTGf3dmHI3xkZMvTEXzUZqYGJmJGJWpaeIjSrOHhmagZn9kRUKBWX+UlIb2R0bOVFqRj0yzxEfaA7OHWlmRZmqODzQfM+qkM2tYZ7hzPfvcs/a5Z+Y6+j3gMnf2Xmuvs+8+e6+99jlQpUqVKlWqVKlSJWPqAcOBp4F3gC+BH4FfgT+AXcBWYDXwNDAKOKcSBs4HJgHLgG+AY0AxpRwG9gCrgQeAK7JwQB1wK7AE2Av8nVL5uHIUWAvcD5yfhQPqgLuBDcCJCijvkpPAJmAi0KCcQwPwELAjA+W9chjoBZwWU/9ZwCRgawbKJpUfgLuAWjUHNAJzgUMZKJhWDgK3xNR/MbA+A+WSylfADSoOaAE+z0CxUuVroFVM/Qvk+VCJcgLoBZwRU/9C4LMMlEsqvwHDVBzQCnyZgWKlyiGgXUz9C8CSDJRLKtuAK1Uc0AZ8k4FipcpRoCOm/gXg9QyUSyqfAheqOKAd+D4DxUqVE8DVMU4oAK9loFxS+QBoVnFAB/BjBoqVKn8BN8Y4oQC8mIFySWUl0KTigE7gpwwUK1VOAffGOKEAzMhAuaSyBGhUcUAXsDcDxUqVYjHOCQVgWgbKJZX5wNkqDugG9megWKlSBB6PcUIBmJqBckllDnCWigN6gAMZKFaqFIEnY5xQAJ7LQLmkMgs4U8UBvcChDBQrVYrA5BgnFIDBGSiXVIYCf6k4QBzwVwaKlSpFYGmMEwrAoAyUSyqDgD9VHCAOOJqBYqVKEVge44QCMDADxZLKAOCIigPEAYczUKxUKQIrYpxQAPpnoFxS6QccUnGAOOBgBoqVKkVgZYwTCkDfDJRLKn2AAyoOEAfsy0CxUqUIrIpxQgHonYFySaU3sF/FAeKAvRkoVqoUgZ0xTigALTNQLqm0BFapOEAcsDIDxUqVIrArxgkFoEUGyiWVFsAKFQeIA5ZnoFipUgR2xzihADTPQLmk0hxYpuIAccDSDBQrVYrAnhgnFIBmGSiXVJoBH6s4QBywJAPFSpUisDfGCQWgaQbKJZWmwIcqDhAHLM5AsVKlCOyLcUIBaJKBckmlCbBIxQHigEUZKFaqFIH9MU4oAI0zUC6pNAYWqjhAHLAgA8VKlSJwIMYJBaBRBsolFXHAfBUHiAPmZ6BYqVIEDsY4oQA0zEC5pNIQmKfiAHHAvAwUK1WKwKEYJxSABhkol1QaAHNVHCAOmJuBYqVKETgc44QCcG4GyiWVc4E5Kg4QB8zOQLFSpQgciXFCATg7A+WSytnALBUHiANmZqBYqVIEjsY4oQCclYFySeUs4B0VB4gDZmSgWJUqVapUqVKlSpX/Af8BF5B4LMYIrCEAAAAASUVORK5CYII="
+    "issuerSignature": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAAyCAYAAACqNX6+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAF7UlEQVR4nO2ce4hVVRTGf3dmHI3xkZMvTEXzUZqYGJmJGJWpaeIjSrOHhmagZn9kRUKBWX+UlIb2R0bOVFqRj0yzxEfaA7OHWlmRZmqODzQfM+qkM2tYZ7hzPfvcs/a5Z+Y6+j3gMnf2Xmuvs+8+e6+99jlQpUqVKlWqVKlSJWPqAcOBp4F3gC+BH4FfgT+AXcBWYDXwNDAKOKcSBs4HJgHLgG+AY0AxpRwG9gCrgQeAK7JwQB1wK7AE2Av8nVL5uHIUWAvcD5yfhQPqgLuBDcCJCijvkpPAJmAi0KCcQwPwELAjA+W9chjoBZwWU/9ZwCRgawbKJpUfgLuAWjUHNAJzgUMZKJhWDgK3xNR/MbA+A+WSylfADSoOaAE+z0CxUuVroFVM/Qvk+VCJcgLoBZwRU/9C4LMMlEsqvwHDVBzQCnyZgWKlyiGgXUz9C8CSDJRLKtuAK1Uc0AZ8k4FipcpRoCOm/gXg9QyUSyqfAheqOKAd+D4DxUqVE8DVMU4oAK9loFxS+QBoVnFAB/BjBoqVKn8BN8Y4oQC8mIFySWUl0KTigE7gpwwUK1VOAffGOKEAzMhAuaSyBGhUcUAXsDcDxUqVYjHOCQVgWgbKJZX5wNkqDugG9megWKlSBB6PcUIBmJqBckllDnCWigN6gAMZKFaqFIEnY5xQAJ7LQLmkMgs4U8UBvcChDBQrVYrA5BgnFIDBGSiXVIYCf6k4QBywJAPFSpUisDfGCQWgaQbKJZWmwIcqDhAHLM5AsVKlCOyLcUIBaJKBckmlCbBIxQHigEUZKFaqFIH9MU4oAI0zUC6pNAYWqjhAHLAgA8VKlSJwIMYJBaBRBsolFXHAfBUHiAPmZ6BYqVIEDsY4oQA0zEC5pNIQmKfiAHHAvAwUK1WKwKEYJxSABhkol1QaAHNVHCAOmJuBYqVKETgc44QCcG4GyiWVc4E5Kg4QB8zOQLFSpQgciXFCATg7A+WSytnALBUHiANmZqBYqVIEjsY4oQCclYFySeUs4B0VB4gDZmSgWJUqVapUqVKlSpX/Af8BF5B4LMYIrCEAAAAASUVORK5CYII="
   },
   "options": {
     "format": "Letter",
@@ -331,11 +349,11 @@ This endpoint allows you to send a JSX template as a string in the request paylo
     "title": "Sales Performance by Product",
     "summary": "This report shows the sales performance of our top products for Q1 2024.",
     "data": [
-      { "label": "Product A", value: 12500 },
-      { "label": "Product B", value: 8700 },
-      { "label": "Product C", value: 15000 },
-      { "label": "Product D", value: 6500 },
-      { "label": "Product E", value: 9800 }
+      { "label": "Product A", "value": 12500 },
+      { "label": "Product B", "value": 8700 },
+      { "label": "Product C", "value": 15000 },
+      { "label": "Product D", "value": 6500 },
+      { "label": "Product E", "value": 9800 }
     ],
     "conclusion": "Product C continues to be our best-selling product, while Product D needs additional marketing efforts to improve sales."
   },
